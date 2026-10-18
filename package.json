@@ -1,0 +1,22 @@
+{
+	"name": "dsh-editing-message",
+	"version": "1.0.5",
+	"description": "Edit a sent message and regenerate it: the model forgets its later answers and re-answers the changed message (fork-based).",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./index.js",
+		"./client": "./client.js",
+		"./package.json": "./package.json"
+	},
+	"dsh": {
+		"bundle": {
+			"patch": "./cordis.patch.yml"
+		},
+		"client": {
+			"platform": "web",
+			"immediately": true,
+			"inject": ["@deepseek-ai/dsh-client-locale"]
+		}
+	}
+}
