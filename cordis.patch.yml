@@ -1,0 +1,11 @@
+# dsh-editing-message — the bundle patch the harness loads for this plugin.
+#
+# The plugin is installed as a bundle: the harness copies the package into the
+# web profile's node_modules and loads THIS file as its overlay patch. The row
+# references the bundle's own package, resolved from the profile's node_modules.
+#
+# No config block: the plugin has no settings for v1. The Plugins page row
+# still owns the enable/disable switch for the whole plugin.
+- insert:
+  - id: editing-message
+    name: dsh-editing-message
